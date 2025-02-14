@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo's Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000; /* Changed to black */
+            color: white; /* Ensure text is readable on black background */
+        }
+        .jumbotron {
+            background: linear-gradient(135deg, #ffffff 0%, #343434 100%);
+            color: white;
+        }
+        .btn-custom {
+            background-color: #6a11cb;
+            border-color: #6a11cb;
+        }
+        .btn-custom a {
+            color: white;
+            text-decoration: none;
+        }
+        .btn-custom:hover {
+            background-color: #2575fc;
+            border-color: #2575fc;
+        }
+        .container-box {
+            border: 2px solid white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container container-box">
+        <div class="jumbotron mt-5 text-center">
+            <h1 class="display-4">Welcome to ToDo's Page</h1>
+            <p class="lead">This is a simple ToDo application built with Flask and Bootstrap.</p>
+            <hr class="my-4">
+            <p>Use the navigation bar to explore the features.</p>
+            <button type="button" class="btn btn-custom mt-3">
+                <a href="{{ url_for('get_todos')}}">Add a new Todo</a>
+            </button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
